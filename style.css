@@ -312,10 +312,12 @@ section {
 }
 
 .shift-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 60px;
     transition: var(--transition-smooth);
+    position: relative;
+    z-index: 1;
 }
 
 .shift-card:hover {

@@ -1,6 +1,8 @@
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+console.log("GSAP & ScrollTrigger Loaded");
+
 // Navbar Scroll Effect
 const navbar = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
@@ -64,7 +66,7 @@ sections.forEach(section => {
         gsap.from(content, {
             scrollTrigger: {
                 trigger: section,
-                start: 'top 80%',
+                start: 'top 85%',
                 toggleActions: 'play none none none'
             },
             y: 40,
@@ -76,12 +78,14 @@ sections.forEach(section => {
     }
 });
 
-// Special Animation for Shift Cards
+// Special Animation for Shift Cards - Trigger earlier for reliability
+console.log("Initializing Shift Cards Animation");
 gsap.from('.shift-card', {
     scrollTrigger: {
         trigger: '.shifts-grid',
-        start: 'top 85%',
-        toggleActions: 'play none none none'
+        start: 'top bottom-=100', // Trigger when top of grid is 100px from bottom of viewport
+        toggleActions: 'play none none none',
+        onEnter: () => console.log("Shifts Animation Started")
     },
     y: 50,
     opacity: 0,
