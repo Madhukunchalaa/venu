@@ -311,6 +311,19 @@ section {
     margin-top: 80px;
 }
 
+.section-dark {
+    background: var(--bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
+    color: var(--text-light) !important;
+}
+
+.section-dark p, .section-dark .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
 .shift-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
